@@ -5,7 +5,6 @@
 package tugasinventaris.java;
 
 
-
 /**
  *
  * @author USER
