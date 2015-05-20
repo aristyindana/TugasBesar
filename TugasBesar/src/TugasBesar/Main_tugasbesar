@@ -1,0 +1,41 @@
+
+package TugasBesar;
+
+public class Main_tugasbesar {
+   public Main_tugasbesar(){
+       //super.IdentitasRK ();
+        System.out.println("BERES BOS");
+        IdentitasRK();
+   } 
+
+    public static void main (String[]Args){
+        Main_tugasbesar A           = new Main_tugasbesar();
+        IdentitasRK yes             = new IdentitasRK();
+        KondisiRK oke               = new KondisiRK();
+        Jml_kds_pssPrasarana asik   = new Jml_kds_pssPrasarana();
+        LingkunganRK wow            = new LingkunganRK();
+        KebersihanRK ihu            = new KebersihanRK();
+        KenyamananRK ting           = new KenyamananRK();
+        KeamananRK tong             = new KeamananRK();
+        
+        yes.IdentitasRK();
+        oke.KondisiRK();
+        asik.Jml_kds_pssPrasarana();
+        wow.LingkunganRK();
+        ihu.KebersihanRK();
+        ting.KenyamananRK();
+        tong.KeamananRK();
+        
+        yes.Test_IdentitasRK();
+        oke.Test_KondisiRK();
+        asik.Test_Jml_kds_pssPrasarana();
+        wow.Test_LingkunganRK();
+        ihu.Test_KebersihanRK();
+        ting.Test_KenyamananRK();
+        tong.Test_KeamananRK();
+     
+        @override
+        public void IdentitasRK(){
+        System.out.println("OKE SELESAI");
+    }
+    }}
