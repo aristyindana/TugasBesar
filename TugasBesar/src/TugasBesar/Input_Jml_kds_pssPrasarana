@@ -1,0 +1,69 @@
+package TugasBesar;
+
+import java.util.Scanner;
+
+public class Input_Jml_kds_pssPrasarana extends Input_IdentitasRK {
+Test_Jml_kds_pssPrasarana sarana = new Test_Jml_kds_pssPrasarana();
+    
+@Override
+void analisis_identitasRK(){   
+    Scanner x = new Scanner(System.in);
+        System.out.print("Masukkan Nama Ruang : ");
+        String nm = (x.next());
+        System.out.print("Masukkan Lokasi Ruang : ");
+        String lk = (x.next());
+        System.out.print("Masukkan Program Studi/Fakultas : ");
+        String pf = (x.next());
+    }
+
+void analisis(){
+    Scanner x = new Scanner(System.in);
+      System.out.print("Masukkan jumlah steker : ");
+      int jml_steker = (x.nextInt());
+      System.out.print("Masukkan kondisi steker : ");
+      int kondisi_steker = (x.nextInt());
+      System.out.print("Masukkan posisi steker : ");
+      String posisi_steker = (x.next());
+      System.out.print("Masukkan jumlah LCD :");
+      int jml_kabelLCD = (x.nextInt());
+      System.out.print("Masukkan kondisi kabel LCD :");
+      String kondisi_kabelLCD = (x.next());
+      System.out.print("Masukkan posisi kabel LCD :");
+      String posisi_kabelLCD = (x.next());
+      System.out.print("Masukkan jumlah lampu :");
+      int jml_lampu = (x.nextInt());
+      System.out.print("Masukkan kondisi lampu :");
+      String kondisi_lampu = (x.next());
+      System.out.print("Masukkan posisi lampu :");
+      String posisi_lampu = (x.next());
+      System.out.print("Masukkan jumlah kipas angin :");
+      int jml_kipasangin = (x.nextInt());
+      System.out.print("Masukkan kondisi kipas angin :");
+      int kondisi_kipasangin = (x.nextInt());
+      System.out.print("Masukkan posisi kipas angin :");
+      String posisi_kipasangin = (x.next());
+      System.out.print("Masukkan jumlah AC :");
+      int jml_AC = (x.nextInt());
+      System.out.print("Masukkan kondisi AC :");
+      String kondisi_AC = (x.next());
+      System.out.print("Masukkan posisi AC :");
+      String posisi_AC = (x.next());
+      System.out.print("Pilih SSID :");
+      String SSID = (x.next());
+      System.out.print("Masukkan bandwidth :");
+      String bandwith = (x.next());
+      System.out.print("Masukkan jumlah CCTV :");
+      int jml_CCTV = (x.nextInt());
+      System.out.print("Masukkan kondisi CCTV :");
+      int kondisi_CCTV = (x.nextInt());
+      System.out.print("Masukkan posisi CCTV :");
+      String posisi_CCTV = (x.next());
+      sarana.kelistrikan(jml_steker, kondisi_steker, posisi_steker);
+      sarana.lcd(jml_kabelLCD, kondisi_kabelLCD, posisi_kabelLCD);
+      sarana.lampu(jml_lampu, kondisi_CCTV, posisi_lampu);
+      sarana.kipasangin(jml_kipasangin, kondisi_kipasangin, posisi_kipasangin);
+      sarana.ac(jml_AC, kondisi_AC, posisi_AC);
+      sarana.internet(SSID, bandwith);
+      sarana.cctv(jml_CCTV, kondisi_CCTV, posisi_CCTV);
+}
+}
