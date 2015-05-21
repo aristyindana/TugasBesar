@@ -1,67 +1,70 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-package tugas.besar;
+package TugasBesar;
 
-import java.util.Scanner;
-
-/**
- *
- * @author SAMSUNG
- */
-public class Test_Jml_kds_pssPrasarana extends Jml_kds_pssPrasarana {
+public class Test_Jml_kds_pssPrasarana {
+    Jml_kds_pssPrasarana eris = new Jml_kds_pssPrasarana();
     
-    @Override     
-    void analisis(){
-      Scanner x = new Scanner(System.in);
-      System.out.print("Masukkan jumlah steker : ");
-      int a = (x.nextInt());
-      System.out.print("Masukkan posisi steker : ");
-      int b = (x.nextInt());
-      System.out.print("Masukkan kondisi steker : ");
-      String c = (x.next());
-      System.out.println("Masukkan jumlah LCD :");
-      int d = (x.nextInt());
-      System.out.println("Masukkan kondisi kabel LCD :");
-      String e = (x.next());
-      System.out.println("Masukkan posisi kabel LCD :");
-      String f = (x.next());
-      System.out.println("Masukkan jumlah lampu :");
-      int g = (x.nextInt());
-      System.out.println("Masukkan kondisi lampu :");
-      String h = (x.next());
-      System.out.println("Masukkan posisi lampu :");
-      String i = (x.next());
-      System.out.println("Masukkan jumlah kipas angin :");
-      int j = (x.nextInt());
-      System.out.println("Masukkan kondisi kipas angin :");
-      int k = (x.nextInt());
-      System.out.println("Masukkan posisi kipas angin :");
-      String l = (x.next());
-      System.out.println("Masukkan jumlah AC :");
-      int m = (x.nextInt());
-      System.out.println("Masukkan kondisi AC :");
-      String n = (x.next());
-      System.out.println("Masukkan posisi AC :");
-      String o = (x.next());
-      System.out.println("Pilih SSID :");
-      String q = (x.next());
-      System.out.println("Masukkan bandwidth :");
-      String r = (x.next());
-      System.out.println("Masukkan jumlah CCTV :");
-      int s = (x.nextInt());
-      System.out.println("Masukkan kondisi CCTV :");
-      int t = (x.nextInt());
-      System.out.println("Masukkan posisi CCTV :");
-      String u = (x.next());
+    
+    String kelistrikan (int jml_steker,int kondisi_steker, String posisi_steker){     
+    if (jml_steker >=4 && kondisi_steker ==4 && "dipojok ruang".equals(posisi_steker) && "dekat dosen".equals(posisi_steker)){
+        return "sesuai";
+    }
+    else {
+        return "tidak sesuai";
+    }
+    }
       
-      super.kelistrikan(t, t);
-      super.lcd(m, o, o);
-      super.lampu(m, s, u);
-      super.kipasangin(s, s, o);
-      super.ac(m, o, o);
-      super.internet(u, n);
-      super.cctv(m, s, o);
-      }
-      }
+    String lcd(int jml_kabelLCD, String kondisi_kabelLCD, String posisi_kabelLCD){
+    if (jml_kabelLCD >=1 && "berfungsi".equals(kondisi_kabelLCD) && "dekat dosen".equals(posisi_kabelLCD)){
+        return "sesuai";
+    }
+    else {
+        return "tidak sesuai";
+    }
+    }
+    
+    String lampu (int jml_lampu , int kondisi_lampu , String posisi_lampu){
+    if (jml_lampu >=18 && 18 ==kondisi_lampu && "atap ruangan".equals(posisi_lampu)){
+        return "sesuai";
+    }
+    else {
+        return "tidak sesuai";
+    }
+    }
+    
+    String kipasangin (int jml_kipasangin , int kondisi_kipasangin, String posisi_kipasangin){
+    if (jml_kipasangin >=2 && kondisi_kipasangin ==2 && "atap ruangan".equals(posisi_kipasangin)){
+        return "sesuai";
+    }
+    else {
+        return "tidak sesuai";
+    }
+    }
+    
+    String ac (int jml_AC , String kondisi_AC, String posisi_AC){
+    if (jml_AC >=1 && "baik".equals(kondisi_AC) && "dibelakang".equals(posisi_AC) && "disamping".equals(posisi_AC)){
+        return "sesuai";
+    }
+    else {
+        return "tidak sesuai";
+    }
+    }
+   
+    String internet (String SSID , String bandwith){
+    if ("UMM Hotspot".equals(SSID) && "UMM Hotspot".equals(bandwith) ){
+        return "sesuai";
+    }
+    else {
+        return "tidak sesuai";
+    }
+    }
+   
+    String cctv (int jml_CCTV , int kondisi_CCTV, String posisi_CCTV){
+    if (jml_CCTV==2 && kondisi_CCTV ==2 && "depan".equals(posisi_CCTV) && "belakang".equals(posisi_CCTV)){
+        return "sesuai";
+    }
+    else {
+        return "tidak sesuai";
+    }
+    }
+
+    }
