@@ -1,10 +1,10 @@
 package TugasBesar;
 
-abstract public class Jml_kds_pssPrasarana {
+public class Jml_kds_pssPrasarana {
     
     private int jml_steker;
     private int kondisi_steker;
-    private String posisi_steker;
+    String posisi_steker;
     private int jml_kabelLCD;
     private String kondisi_kabelLCD;
     private String posisi_kabelLCD;
@@ -183,89 +183,4 @@ abstract public class Jml_kds_pssPrasarana {
         this.posisi_CCTV = posisi_CCTV;
     }
     
-    String kelistrikan (int jml_steker,int kondisi_steker){     
-    if (jml_steker >=4 && kondisi_steker ==4){
-         return "sesuai";
-    }   
-    else if ( "dipojok ruang".equals(posisi_steker) || "dekat dosen".equals(posisi_steker)){
-        return "sesuai";
     }
-    else {
-        return "tidak sesuai";
-    }
-    }
-      
-    String lcd(int jml_kabelLCD, String kondisi_kabelLCD, String posisi_kabelLCD){
-    if (jml_kabelLCD >=1){
-        return "sesuai";
-    }
-    else if ("berfungsi".equals(kondisi_kabelLCD) & "dekat dosen".equals(posisi_kabelLCD)){
-        return "sesuai";
-    }
-    else {
-        return "tidak sesuai";
-    }
-    }
-    
-    String lampu (int jml_lampu , int kondisi_lampu , String posisi_lampu){
-    if (jml_lampu >=18 && kondisi_lampu ==18){
-        return "sesuai";
-    }
-    else if ("atap ruangan".equals(posisi_lampu)){
-        return "sesuai";
-    }
-    else {
-        return "tidak sesuai";
-    }
-    }
-    
-    String kipasangin (int jml_kipasangin , int kondisi_kipasangin, String posisi_kipasangin){
-    if (jml_kipasangin >=2 && kondisi_kipasangin ==2 ){
-        return "sesuai";
-    }
-    else if ( "atap ruangan".equals(posisi_kipasangin)){
-        return "sesuai";
-    }
-    else {
-        return "tidak sesuai";
-    }
-    }
-    
-    String ac (int jml_AC , String kondisi_AC, String posisi_AC){
-    if (jml_AC >=1){
-        return "sesuai";
-    }
-    else if ("baik".equals(kondisi_AC) ){
-        return "sesuai";
-    }
-    else if  ("dibelakang".equals(posisi_AC) || "disamping".equals(posisi_AC)){
-        return "sesuai";
-    }
-    else {
-        return "tidak sesuai";
-    }
-    }
-   
-    String internet (String SSID , String bandwith){
-    if ("UMM Hotspot".equals(SSID) && "UMM Hotspot".equals(bandwith) ){
-        return "sesuai";
-    }
-    else {
-        return "tidak sesuai";
-    }
-    }
-   
-    String cctv (int jml_CCTV , int kondisi_CCTV, String posisi_CCTV){
-    if (jml_CCTV==2 && kondisi_CCTV ==2 ){
-        return "sesuai";
-    }
-    else if ( "depan".equals(posisi_CCTV) || "belakang".equals(posisi_CCTV)){
-        return "sesuai";
-    }
-    else {
-        return "tidak sesuai";
-    }
-    }
-
-    abstract void analisis();
-   }
