@@ -1,0 +1,17 @@
+package TugasBesar;
+
+import java.util.Scanner;
+
+public class Input_IdentitasRK extends IdentitasRK {
+    
+@Override
+void analisis_identitasRK(){
+        Scanner x = new Scanner(System.in);
+        System.out.print("Masukkan Nama Ruang : ");
+        String nm = (x.next());
+        System.out.print("Masukkan Lokasi Ruang : ");
+        String lk = (x.next());
+        System.out.print("Masukkan Program Studi/Fakultas : ");
+        String pf = (x.next());
+    }    
+}
