@@ -1,6 +1,6 @@
 package TugasBesar;
 
-abstract public class KenyamananRK {
+public class KenyamananRK {
     
     public String kebisingan;
     public String bau;
@@ -48,50 +48,4 @@ abstract public class KenyamananRK {
         this.keausan = keausan;
     }
     
-    String kebisingan ( String kebisingan){
-    if ("tidak bising".equals(kebisingan) ){
-    return "sesuai";
-    }
-    else {
-    return "tidak sesuai";
-    }
-    }
-    
-    String bau ( String bau){
-    if ("tidak bau".equals(bau) ){
-    return "sesuai";
-    }
-    else {
-    return "tidak sesuai";
-    }
-    }
-    
-    String kebocoran ( String kebocoran){
-    if ("tidak bocor".equals(kebocoran) ){
-    return "sesuai";
-    }
-    else {
-    return "tidak sesuai";
-    }
-    }
-    
-    String kerusakan ( String kerusakan){
-    if ("tidak rusak".equals(kerusakan) ){
-    return "sesuai";
-    }
-    else {
-    return "tidak sesuai";
-    }
-    }
-    
-    String keausan ( String keausan){
-    if ("tidak aus".equals(keausan) ){
-    return "sesuai";
-    }
-    else {
-    return "tidak sesuai";
-    }
-    }
-
-    abstract void analisis();
     }
