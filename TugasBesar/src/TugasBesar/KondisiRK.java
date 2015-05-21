@@ -1,14 +1,6 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-package tugas.besar;
+package TugasBesar;
 
-/**
- *
- * @author SAMSUNG
- */
-abstract public class KondisiRK {
+public class KondisiRK {
     
     private int panjang;
     private int lebar;
@@ -79,34 +71,4 @@ abstract public class KondisiRK {
         return ll;
     }
     
-    String bentuk (int panjang , int lebar){
-    if (panjang!=lebar){
-        return "persegi panjang";
     }
-    else {
-        return "persegi";
-    }
-    }
-    
-    String hitungrasio (int panjang, int lebar, int jmlkursi){
-    int ll = panjang*lebar;
-    double rl = ll/jmlkursi;
-    if(rl >= 0.5){
-        return "sesuai";
-    } 
-    else {
-        return "tidak sesuai";
-    }
-    }
-    
-    String jumlahpintujadi (int jumlahpintu,int jumlahjendela){
-    if (jumlahpintu>=2 && jumlahjendela >=1){
-        return "sesuai";
-    }
-    else {
-        return "tidak sesuai";
-    }
-    }
-    
-    abstract void analisis();
-}
