@@ -1,15 +1,6 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-package tugas.besar;
+package TugasBesar;
 
-/**
- *
- * @author SAMSUNG
- */
-
- abstract public class LingkunganRK {
+public class LingkunganRK {
  
  private String kondisi_lantai;
  private String kondisi_dinding;
@@ -56,16 +47,5 @@ package tugas.besar;
     public void setKondisi_jendela(String kondisi_jendela) {
         this.kondisi_jendela = kondisi_jendela;
     }
-
-    String kebersihan (String kondisi_lantai, String kondisi_dinding, String kondisi_atap, String kondisi_pintu, String kondisi_jendela){
-    if ("bersih".equals(kondisi_lantai) && "bersih".equals(kondisi_dinding) &&  "bersih".equals(kondisi_atap) && "bersih".equals(kondisi_pintu) && "bersih".equals(kondisi_jendela)){
-        return "sesuai";
-    }
-    else {
-        return "tidak sesuai";
-    }
-    }
-    
-    abstract void analisis();
     
     }
