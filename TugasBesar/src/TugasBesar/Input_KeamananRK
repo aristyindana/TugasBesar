@@ -1,0 +1,35 @@
+package TugasBesar;
+
+import java.util.Scanner;
+
+public class Input_KeamananRK extends Input_IdentitasRK {
+Test_Keamanan aman = new Test_Keamanan();
+    
+    void analisis(){
+    Scanner x = new Scanner(System.in);
+    System.out.println("Analisis kekokohan :");
+    String kekokohan = (x.next());
+    System.out.println("Analisis kunci pintu :");
+    String kuncipintu = (x.next());
+    System.out.println("Analisis jendela :");
+    String jendela = (x.next());
+    System.out.println("Analisis bahaya :");
+    String bahaya = (x.next());
+    aman.kekokohan(kekokohan);
+    aman.kuncipintu(kuncipintu);
+    aman.jendela(jendela);
+    aman.keamananRK(bahaya);
+    }
+
+    @Override
+    void analisis_identitasRK() {
+        Scanner x = new Scanner(System.in);
+        System.out.print("Masukkan Nama Ruang : ");
+        String nm = (x.next());
+        System.out.print("Masukkan Lokasi Ruang : ");
+        String lk = (x.next());
+        System.out.print("Masukkan Program Studi/Fakultas : ");
+        String pf = (x.next());
+    
+        }
+}
