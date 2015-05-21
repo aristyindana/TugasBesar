@@ -1,6 +1,6 @@
 package TugasBesar;
 
-abstract public class KeamananRK {    
+public class KeamananRK {    
 
     private String kekokohan;
     private String kunci_pintu;
@@ -47,44 +47,5 @@ abstract public class KeamananRK {
     public void setList_inputan(String list_inputan) {
         this.list_inputan = list_inputan;
     }
-
-    String kekokohan ( String kekokohan){
-    if ("kokoh".equals(kekokohan) ){
-        return "sesuai";
-    }
-    else {
-        return "tidak sesuai";
-    }
-    }
-   
-    String kuncipintu ( String kuncipintu){
-    if ("ada".equals(kuncipintu) ){
-        return "sesuai";
-    }
-    else {
-        return "tidak sesuai";
-    }
-    }
     
-    String jendela ( String jendela){
-    
-    if ("ada".equals(jendela) ){
-        return "sesuai";
-    }
-    else {
-        return "tidak sesuai";
-    }
-    }
-    
-    String keamananRK ( String bahaya){
-    
-    if ("ada".equals(bahaya) ){
-        return "sesuai";
-    }
-    else {
-        return "tidak sesuai";
-    }
-    }
-    
-    abstract void analisis();
     }
