@@ -1,0 +1,34 @@
+package TugasBesar;
+
+public class Test_KondisiRK {
+KondisiRK kond = new KondisiRK();
+    
+    String bentuk (int panjang , int lebar){
+    if (panjang!=lebar){
+        return "persegi panjang";
+    }
+    else {
+        return "persegi";
+    }
+    }
+    
+    String hitungrasio (int panjang, int lebar, int jmlkursi){
+    int ll = panjang*lebar;
+    double rl = ll/jmlkursi;
+    if(rl >= 0.5){
+        return "sesuai";
+    } 
+    else {
+        return "tidak sesuai";
+    }
+    }
+    
+    String jumlahpintujadi (int jumlahpintu,int jumlahjendela){
+    if (jumlahpintu>=2 && jumlahjendela >=1){
+        return "sesuai";
+    }
+    else {
+        return "tidak sesuai";
+    }
+    }
+    }
