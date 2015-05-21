@@ -1,0 +1,15 @@
+package TugasBesar;
+
+public class Test_LingkunganRK {
+LingkunganRK lingkup = new LingkunganRK();
+
+    String kebersihan (String kondisi_lantai, String kondisi_dinding, String kondisi_atap, String kondisi_pintu, String kondisi_jendela){
+    if ("bersih".equals(kondisi_lantai) && "bersih".equals(kondisi_dinding) &&  "bersih".equals(kondisi_atap) && "bersih".equals(kondisi_pintu) && "bersih".equals(kondisi_jendela)){
+        return "sesuai";
+    }
+    else {
+        return "tidak sesuai";
+    }
+    }    
+
+    }
