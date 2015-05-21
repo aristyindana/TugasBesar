@@ -1,0 +1,32 @@
+package TugasBesar;
+
+import java.util.Scanner;
+
+public class Input_KebersihanRK extends Input_IdentitasRK {
+Test_KebersihanRK bersih = new Test_KebersihanRK();
+    
+    void analisis(){
+        Scanner x = new Scanner(System.in);
+        System.out.print("Masukkan analisis sirkulasi udara  : ");
+        String su = (x.next());
+        System.out.print("Masukkan analisis nilai pencahayaan : ");
+        int np = (x.nextInt());
+        System.out.print("Masukkan analisis kelembaban : ");
+        int kb = (x.nextInt());
+        System.out.print("Masukkan analisis suhu : ");
+        int sh = (x.nextInt());
+    }
+    
+    @Override
+void analisis_identitasRK(){
+    Scanner x = new Scanner(System.in);
+        System.out.print("Masukkan Nama Ruang : ");
+        String nm = (x.next());
+        System.out.print("Masukkan Lokasi Ruang : ");
+        String lk = (x.next());
+        System.out.print("Masukkan Program Studi/Fakultas : ");
+        String pf = (x.next());
+    
+}
+
+}
