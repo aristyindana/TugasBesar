@@ -1,0 +1,79 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package TugasBesar;
+
+
+import java.io.IOException;
+
+/**
+ *
+ * @author SAMSUNG
+ */
+public class Main {
+    public static void main(String[]args)throws IOException{
+        
+        //IK.analisis
+        
+        KondisiRK kond = new KondisiRK();
+        kond.getLuas();
+        kond.getRasioluas();
+        kond.getJmlkursi();
+        kond.getJmljendela();
+        
+        Jml_kds_pssPrasarana JKP = new Jml_kds_pssPrasarana();
+        JKP.getJml_steker();
+        JKP.getKondisi_steker();
+        JKP.getPosisi_steker();
+        
+        JKP.getJml_kabelLCD();
+        JKP.getKondisi_kabelLCD();
+        JKP.getPosisi_kabelLCD();
+        
+        JKP.getJml_lampu();
+        JKP.getKondisi_lampu();
+        JKP.getPosisi_lampu();
+        
+        JKP.getJml_kipasangin();
+        JKP.getKondisi_kipasangin();
+        JKP.getPosisi_kipasangin();
+        
+        JKP.getJml_AC();
+        JKP.getKondisi_AC();
+        JKP.getPosisi_AC();
+        
+        JKP.getJml_CCTV();
+        JKP.getKondisi_CCTV();
+        JKP.getPosisi_CCTV();
+                
+        JKP.getSSID();
+        JKP.getBandwidth();
+        
+        LingkunganRK lingkup = new LingkunganRK();
+        lingkup.getKondisi_atap();
+        lingkup.getKondisi_dinding();
+        lingkup.getKondisi_jendela();
+        lingkup.getKondisi_pintu();
+        lingkup.getKondisi_lantai();
+        
+        KebersihanRK bersih = new KebersihanRK();
+        bersih.getSirklusi_udara();
+        bersih.getNilai_pencahayaan();
+        bersih.getKelembapan();
+        bersih.getSuhu();
+        
+        KenyamananRK nyaman = new KenyamananRK();
+        nyaman.getBau();
+        nyaman.getKebisingan();
+        nyaman.getKerusakan();
+        nyaman.getKebocoran();
+        nyaman.getKeausan();
+        
+        KeamananRK aman = new KeamananRK();
+        aman.getKekokohan();
+        aman.getBahaya();
+        aman.getKunci_pintu();
+        aman.getList_inputan();
+    }
+}
