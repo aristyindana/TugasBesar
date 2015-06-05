@@ -1,17 +1,51 @@
 package TugasBesar;
 
+import java.io.IOException;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
-public class Input_IdentitasRK extends IdentitasRK {
-    
+
+public class Input_IdentitasRK extends IdentitasRK{
+    public Input_IdentitasRK (String namaRK, String lokasiRK, String programstudi_fakultas){
+    super (namaRK, lokasiRK, programstudi_fakultas);
+    }
+
 @Override
 void analisis_identitasRK(){
-        Scanner x = new Scanner(System.in);
-        System.out.print("Masukkan Nama Ruang : ");
-        String nm = (x.next());
-        System.out.print("Masukkan Lokasi Ruang : ");
-        String lk = (x.next());
-        System.out.print("Masukkan Program Studi/Fakultas : ");
-        String pf = (x.next());
+        try {
+           Scanner x = new Scanner(System.in);
+           System.out.print("Masukkan Nama Ruang : ");
+           String nm = (x.next());
+           System.out.print("Masukkan Lokasi Ruang : ");
+           String lk = (x.next());
+           System.out.print("Masukkan Program Studi/Fakultas : ");
+           String pf = (x.next()); 
+           System.out.println(" Nama Ruang: " +nm);
+            
+            
+            
+            //Test_IdentitasRK aku = new Test_IdentitasRK();
+            
+            String path = "D:/namaruang.txt";
+            boolean append = true;//jika append = false file lama dihapus, jika true melanjutkan file yang ada
+ 
+            TextHandle file = new TextHandle(path,append); 
+   
+            file.writeFile(nm);
+            file.writeFile(lk);
+            file.writeFile(pf);
+           
+            System.out.println("Hasil Input Ruang :");
+            
+            String [] aryLines = file.openFile();
+            int i;
+            for ( i=0; i < aryLines.length; i++ ) {
+                System.out.println( aryLines[ i ] ) ;
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(Input_IdentitasRK.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
     }    
 }
