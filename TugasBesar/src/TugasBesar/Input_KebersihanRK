@@ -1,11 +1,58 @@
 package TugasBesar;
 
+import java.io.IOException;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Input_KebersihanRK extends Input_IdentitasRK {
+    public Input_KebersihanRK (String namaRK, String lokasiRK, String programstudi_fakultas){
+    super (namaRK, lokasiRK, programstudi_fakultas);}
+
 Test_KebersihanRK bersih = new Test_KebersihanRK();
     
-    void analisis(){
+@Override
+void analisis_identitasRK(){   
+        try {
+           Scanner x = new Scanner(System.in);
+           System.out.print("Masukkan Nama Ruang : ");
+           String nm = (x.next());
+           System.out.print("Masukkan Lokasi Ruang : ");
+           String lk = (x.next());
+           System.out.print("Masukkan Program Studi/Fakultas : ");
+           String pf = (x.next()); 
+           System.out.println(" Nama Ruang: " +nm);
+            
+            
+            
+            //Test_IdentitasRK aku = new Test_IdentitasRK();
+            
+            String path = "D:/namaruang.txt";
+            boolean append = true;//jika append = false file lama dihapus, jika true melanjutkan file yang ada
+ 
+            TextHandle file = new TextHandle(path,append); 
+               
+               
+//            System.out.print("Masukan Kata :");
+            
+            
+            file.writeFile(nm);
+            file.writeFile(lk);
+            file.writeFile(pf);
+           
+            System.out.println("Hasil Input Ruang :");
+            
+            String [] aryLines = file.openFile();
+            int i;
+            for ( i=0; i < aryLines.length; i++ ) {
+                System.out.println( aryLines[ i ] ) ;
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(Input_IdentitasRK.class.getName()).log(Level.SEVERE, null, ex);
+        }} 
+        
+        void analisis(){
+    try{
         Scanner x = new Scanner(System.in);
         System.out.print("Masukkan analisis sirkulasi udara  : ");
         String su = (x.next());
@@ -15,18 +62,54 @@ Test_KebersihanRK bersih = new Test_KebersihanRK();
         int kb = (x.nextInt());
         System.out.print("Masukkan analisis suhu : ");
         int sh = (x.nextInt());
-    }
-    
-    @Override
-void analisis_identitasRK(){
-    Scanner x = new Scanner(System.in);
-        System.out.print("Masukkan Nama Ruang : ");
-        String nm = (x.next());
-        System.out.print("Masukkan Lokasi Ruang : ");
-        String lk = (x.next());
-        System.out.print("Masukkan Program Studi/Fakultas : ");
-        String pf = (x.next());
-    
+        
+        bersih.suhu(sh);
+        bersih.kelembapan(kb);
+        bersih.pencahayaan(sh);
+        bersih.sirkulasiUdara(su);
+        
+              System.out.println(" hasil "+bersih.sirkulasiUdara(su));
+              String Clean = bersih.sirkulasiUdara(su) ;
+              System.out.println(" hasil "+bersih.pencahayaan(sh));
+              String Bright = bersih.pencahayaan(sh);
+              System.out.println(" hasil "+bersih.kelembapan(kb));
+              String density = bersih.kelembapan(kb);
+              System.out.println(" hasil "+bersih.suhu(sh));
+              String electric = bersih.suhu(sh);
+              
+        String path = "D:/namaruang.txt";
+              boolean append = true;//jika append = false file lama dihapus, jika true melanjutkan file yang ada
+         
+                    TextHandle file = new TextHandle(path,append); 
+                       
+                       
+        //           System.out.print("Masukan Kata :");
+                    
+                    
+                    file.writeFile(Clean);
+                    file.writeFile(Bright);
+                    file.writeFile(density);
+                    file.writeFile(electric);
+                  
+              
+                   
+                    System.out.println("Hasil Input Ruang :");
+                    
+                    String [] aryLines = file.openFile();
+                    int i;
+                    for ( i=0; i < aryLines.length; i++ ) {
+                        System.out.println( aryLines[ i ] ) ;
+                    }
+        } catch (IOException ex) {
+            Logger.getLogger(Input_KebersihanRK.class.getName()).log(Level.SEVERE, null, ex);
+        }
+      
+      
+      
 }
 
+              
+        
+        
 }
+
